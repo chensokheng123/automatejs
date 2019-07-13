@@ -1,6 +1,4 @@
 
-// 3.push our project to github
-// 4.update our project
 process.chdir(__dirname);
 require("dotenv").config();
 const octikit = require("@octokit/rest");
@@ -10,7 +8,7 @@ const clientWithAuth = new octikit({
 });
 let cmd = process.argv[2];
 let folderName = process.argv[3];
-//create repo
+//create repository
 
 if (cmd === "create") {
     clientWithAuth.repos.createForAuthenticatedUser({

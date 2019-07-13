@@ -11,7 +11,7 @@ pushrepo(){
 
 update(){
     git add .
-    git commit -m "$2"
+    git commit -m "$foldername"
     git push
 }
 
@@ -25,5 +25,5 @@ then
     pushrepo
 elif [ $1 == "update" ]
 then
-    updaterepo
+    update
 fi
